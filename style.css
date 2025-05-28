@@ -1,0 +1,77 @@
+body {
+  font-family: monospace;
+  background: #111;
+  color: #00ff88;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#lyrics {
+  font-size: 24px;
+  height: 30px;
+  margin-top: 20px;
+  white-space: pre-wrap;
+  text-align: center;
+  color: white;
+}
+
+#startBtn {
+  padding: 10px 20px;
+  background: #00ff88;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+#startBtn:hover {
+  background: #00cc66;
+}
+
+#stopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background: #ff4444;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: none; /* Awalnya disembunyikan */
+}
+
+#stopBtn:hover {
+  background: #cc0000;
+}
+
+#bgVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Letakkan di belakang semua elemen lain */
+  opacity: 0.3; /* Biar gak ganggu teks, bisa kamu ubah */
+  pointer-events: none; /* Supaya klik tidak terganggu */
+}
+
+.ig-fixed {
+  position: fixed;
+  bottom: 30px; /* jarak dari bawah layar */
+  left: 50%; /* geser ke tengah */
+  transform: translateX(-50%); /* benar-benar center horizontal */
+  z-index: 1000; /* supaya tampil di atas elemen lain kalau perlu */
+}
+
+.ig-fixed img {
+  width: 40px;
+  height: 40px;
+}
